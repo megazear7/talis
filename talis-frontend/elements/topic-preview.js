@@ -2,7 +2,11 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     :host {
-      background-color: var(--secondary-color);
+      display: block;
+      background-color: #fff;
+      margin-bottom: 1rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
     }
     #container {
       padding: var(--standard-padding);
@@ -15,6 +19,9 @@ template.innerHTML = `
       width: 50%;
       float: right;
     }
+    #clear {
+      clear: both;
+    }
     h3 {
       border-bottom: 1px solid black;
     }
@@ -26,6 +33,7 @@ template.innerHTML = `
     }
     button {
       background-color: var(--primary-color);
+      padding: 0.5rem;
     }
   </style>
   <div id="container">
@@ -37,6 +45,7 @@ template.innerHTML = `
       <p>Lorem ipsum description.</p>
       <button>Take Action</button>
     </div>
+    <div id="clear"></div>
   </div>
 `;
 
