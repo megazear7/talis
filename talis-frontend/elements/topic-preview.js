@@ -1,6 +1,5 @@
 const template = document.createElement('template');
 template.innerHTML = `
-  <link href="shared.css" rel="stylesheet">
   <style>
     :host {
       background-color: var(--secondary-color);

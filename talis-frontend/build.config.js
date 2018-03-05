@@ -2,8 +2,15 @@ const paths = {
 	scripts: {
 		src: 'index.js',
 		dest: {
-			path: '../talis-ui/src/main/content/jcr_root/etc/designs/talis/js',
+			path: '../talis-ui/src/main/content/jcr_root/etc/designs/talis',
 			fileName: 'build.js',
+		}
+	},
+	styles: {
+		src: 'main.css',
+		dest: {
+			path: '../talis-ui/src/main/content/jcr_root/etc/designs/talis',
+			fileName: 'build.css',
 		}
 	}
 };
