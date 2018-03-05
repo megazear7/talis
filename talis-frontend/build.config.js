@@ -11,7 +11,7 @@ const paths = {
 const webpackConfig = {
   entry: `./${paths.scripts.src}`,
 	output: {
-		path: '/Users/35267/src/icfolson/aem-web-components/talis/talis-ui/src/main/content/jcr_root/etc/designs/talis/js',
+		path: `${__dirname}/${paths.scripts.dest.path}`,
 		filename: "build.js"
 	},
   /*module: {
