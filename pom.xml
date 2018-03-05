@@ -25,7 +25,7 @@
         <core.artifactId>talis-core</core.artifactId>
 
         <!-- versions -->
-        <aem.library.version>9.2.0</aem.library.version>
+        <aem.library.version>8.3.1</aem.library.version>
         <multicompositeaddon.version>3.2.2</multicompositeaddon.version>
         <component.plugin.version>4.3.0</component.plugin.version>
         <package.plugin.version>0.6.0</package.plugin.version>

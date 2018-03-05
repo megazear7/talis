@@ -1,4 +1,3 @@
-<div data-sly-use.story="com.talis.components.content.featuredstory.FeaturedStory">${story.title}</div>
-<div data-sly-story.textEmpty="${!story.title}" class="cq-placeholder" data-emptytext="Title"></div>
+<sly data-sly-use.story="${component.properties['className']}" />
 
-<talis-topic-preview title="hello"></talis-topic-preview>
+<talis-topic-preview title="${story.title}"></talis-topic-preview>

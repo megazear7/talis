@@ -1,4 +1,4 @@
-package com.talis.components.content.testcomponent
+package com.talis.components.content.featuredstory
 
 import com.citytechinc.cq.component.annotations.DialogField
 import com.citytechinc.cq.component.annotations.widgets.TextField
@@ -10,7 +10,9 @@ import javax.inject.Inject
 @AEMComponent("Featured Story")
 class FeaturedStory extends AbstractComponent {
 
-	@DialogField(fieldLabel = "Test Title", fieldDescription = "This is the test title.")
+	@DialogField(
+		fieldLabel = "Test Title",
+		fieldDescription = "This is the test title.")
 	@TextField
   @Inject
   String title
