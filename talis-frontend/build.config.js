@@ -1,6 +1,8 @@
 const paths = {
 	scripts: {
 		src: 'index.js',
+		all: './elements/*.js',
+		build: '../talis-ui/src/main/content/jcr_root/etc/designs/talis/build.js',
 		dest: {
 			path: '../talis-ui/src/main/content/jcr_root/etc/designs/talis',
 			fileName: 'build.js',
@@ -8,6 +10,8 @@ const paths = {
 	},
 	styles: {
 		src: 'main.css',
+		all: './*.css',
+		build: '../talis-ui/src/main/content/jcr_root/etc/designs/talis/build.css',
 		dest: {
 			path: '../talis-ui/src/main/content/jcr_root/etc/designs/talis',
 			fileName: 'build.css',
