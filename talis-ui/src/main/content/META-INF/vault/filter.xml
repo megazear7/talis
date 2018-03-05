@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/talis" />
+    <filter root="/etc/designs/talis">
+        <exclude pattern="/etc/designs/talis/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/etc/packages/aem-library/aem-library-ui-${aem.library.version}.zip"/>
+    <filter root="/etc/packages/multicompositeaddon/multicomposite-addon-${multicompositeaddon.version}.zip"/>
+</workspaceFilter>
