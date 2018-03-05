@@ -1,3 +1,4 @@
 target
 node_modules
 talis-ui/src/main/content/jcr_root/etc/designs/talis/js/build.js
+talis-ui/src/main/content/jcr_root/etc/designs/talis/js/build.js.map
