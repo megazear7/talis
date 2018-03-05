@@ -6,7 +6,7 @@ import org.apache.sling.api.resource.Resource
 import org.apache.sling.models.annotations.Model
 
 @AnnotationCollector
-@Component(group = "")
+@Component(group = "Talis")
 @Model(adaptables = Resource)
 @interface AEMComponent{
 }
