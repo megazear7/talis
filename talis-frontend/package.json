@@ -11,6 +11,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.3",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "del": "^3.0.0",
@@ -18,5 +19,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-slang": "^1.0.2",
     "webpack": "^4.1.0"
+  },
+  "dependencies": {
+    "webcomponentsjs": "^1.0.2"
   }
 }
