@@ -14,7 +14,7 @@ const webpackConfig = {
 		path: '/Users/35267/src/icfolson/aem-web-components/talis/talis-ui/src/main/content/jcr_root/etc/designs/talis/js',
 		filename: "build.js"
 	},
-  module: {
+  /*module: {
     rules: [{
       test: /\.jsx?$/,
       exclude: [/node_modules/],
@@ -23,11 +23,11 @@ const webpackConfig = {
         options: { presets: ['babel-preset-env'].map(require.resolve) }
       }]
     }]
-  },
+  },*/
   resolve: {
     modules: ['./node_modules/']
   },
-	mode: 'production',
+	mode: 'development',
   devtool: 'source-map'
 };
 
