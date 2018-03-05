@@ -4,9 +4,11 @@ template.innerHTML = `
     :host {
       display: block;
       background-color: #fff;
-      margin-bottom: 1rem;
       border-radius: var(--border-radius);
       box-shadow: var(--box-shadow);
+    }
+    :host, * {
+      box-sizing: border-box;
     }
     #container {
       padding: var(--standard-padding);
@@ -18,6 +20,7 @@ template.innerHTML = `
     #content {
       width: 50%;
       float: right;
+      padding: 1rem;
     }
     #clear {
       clear: both;
@@ -28,11 +31,14 @@ template.innerHTML = `
     h6 {
       color: var(--gray);
     }
-    p {
-      padding: 1rem;
+    p, button {
+      margin: 0.5rem 0 1rem 0;
     }
     button {
       background-color: var(--primary-color);
+      border-radius: var(--border-radius);
+      color: var(--inverted-font-color);
+      font-size: 0.8rem;
       padding: 0.5rem;
     }
   </style>

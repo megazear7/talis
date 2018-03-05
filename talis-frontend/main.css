@@ -2,8 +2,30 @@
   --primary-color: #039be5;
   --secondary-color: #ffa100;
   --gray: #777;
-  --font-color: #fff;
+  --font-color: #000b;
+  --font-size: 20px;
+  --inverted-font-color: #fffd;
   --border-radius: 4px;
   --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   --standard-padding: 16px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+}
+
+html {
+  background-color: #efefef;
+  color: var(--font-color);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+talis-topic-preview {
+  margin: 1rem 0 0 0;
 }
