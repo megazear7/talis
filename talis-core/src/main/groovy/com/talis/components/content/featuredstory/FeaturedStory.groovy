@@ -11,9 +11,26 @@ import javax.inject.Inject
 class FeaturedStory extends AbstractComponent {
 
 	@DialogField(
-		fieldLabel = "Test Title",
-		fieldDescription = "This is the test title.")
+		fieldLabel = "Title")
 	@TextField
   @Inject
   String title
+
+	@DialogField(
+		fieldLabel = "Sub Title")
+	@TextField
+  @Inject
+  String subtitle
+
+	@DialogField(
+		fieldLabel = "Message")
+	@TextField
+  @Inject
+  String message
+
+	@DialogField(
+		fieldLabel = "Call to Action Text")
+	@TextField
+  @Inject
+  String ctaText
 }

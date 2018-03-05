@@ -1,3 +1,6 @@
 <sly data-sly-use.story="${component.properties['className']}" />
 
-<talis-topic-preview title="${story.title}"></talis-topic-preview>
+<talis-topic-preview title="${story.title}" subtitle="${story.subtitle}">
+  <p>${story.message}</p>
+  <button>${story.ctaText}</button>
+</talis-topic-preview>

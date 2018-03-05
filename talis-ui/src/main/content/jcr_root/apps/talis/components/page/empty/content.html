@@ -1,5 +1,7 @@
 <div class="container">
   <sly data-sly-resource="${'mainpar' @ resourceType='wcm/foundation/components/parsys'}"/>
 
-  <talis-topic-preview></talis-topic-preview>
+  <talis-topic-preview title="From Page" subtitle="This is from the page itself">
+    <p>This &lt;talis-topic-preview&gt; element was added directly into the page component. The "empty page" aem component uses the "Topic Preview" design pattern without needing to know the markup of that design pattern. The implementation details are hidden and it can add in it's own markup independantly of the Featured Story.</p>
+  </talis-topic-preview>
 </div>
