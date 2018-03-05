@@ -24,6 +24,7 @@ gulp.task('build-scripts', ['clean-scripts'], done => {
 gulp.task('build-styles', ['clean-styles'], () => {
   const dest = config.paths.styles.dest;
   return gulp.src(config.paths.styles.src)
+      .pipe(concat(dest.fileName))
       .pipe(gulp.dest(dest.path));
 });
 
