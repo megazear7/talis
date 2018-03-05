@@ -8,6 +8,12 @@
   --border-radius: 4px;
   --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   --standard-padding: 16px;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.25rem;
+  --h5-font-size: 1.1rem;
+  --h6-font-size: 1rem;
 }
 
 html, body {
@@ -21,17 +27,28 @@ html {
   color: var(--font-color);
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
+h1 {
+  font-size: var(--h1-font-size);
 }
 
-talis-topic-preview {
-  margin: 1rem 0 0 0;
+h2 {
+  font-size: var(--h2-font-size);
 }
 
-p, button {
-  margin: 0.5rem 0 1rem 0;
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
 }
 
 button {
@@ -40,4 +57,21 @@ button {
   color: var(--inverted-font-color);
   font-size: 0.8rem;
   padding: 0.5rem;
+}
+
+p, button {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.featuredstory talis-topic-preview {
+  margin: 1rem 0 0 0;
+  display: block;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }

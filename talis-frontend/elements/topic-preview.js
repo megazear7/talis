@@ -1,13 +1,7 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-    :host {
-      display: block;
-      background-color: #fff;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-    }
-    :host, * {
+    * {
       box-sizing: border-box;
     }
     #container {
@@ -27,9 +21,11 @@ template.innerHTML = `
     }
     h3 {
       border-bottom: 1px solid black;
+      font-size: var(--h3-font-size);
     }
     h6 {
       color: var(--gray);
+      font-size: var(--h6-font-size);
     }
   </style>
   <div id="container">
