@@ -1,22 +1,22 @@
-const template = document.createElement('template');
+var template = document.createElement('template');
 template.innerHTML = `
   <style>
     * {
       box-sizing: border-box;
     }
-    #container {
+    .container {
       padding: var(--standard-padding);
     }
-    #header {
+    .header {
       width: 50%;
       float: left;
     }
-    #content {
+    .content {
       width: 50%;
       float: right;
       padding: 1rem;
     }
-    #clear {
+    .clear {
       clear: both;
     }
     h3 {
@@ -28,17 +28,19 @@ template.innerHTML = `
       font-size: var(--h6-font-size);
     }
   </style>
-  <div id="container">
-    <div id="header">
+  <div class="container">
+    <div class="header">
       <h3></h3>
       <h6></h6>
     </div>
-    <div id="content">
+    <div class="content">
       <slot>
     </div>
-    <div id="clear"></div>
+    <div class="clear"></div>
   </div>
 `;
+
+if (typeof ShadyCSS !== "undefined") ShadyCSS.prepareTemplate(template, 'talis-topic-preview');
 
 export default class TalisTopicPreview extends HTMLElement {
   static get is() {
@@ -76,6 +78,10 @@ export default class TalisTopicPreview extends HTMLElement {
     this.$subtitle = () => this.shadowRoot.querySelector("h6");
   }
 
+  connectedCallback() {
+    if (typeof ShadyCSS !== "undefined") ShadyCSS.styleElement(this);
+  }
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (attrName === 'title') {
       this._titleChanged(oldVal, newVal);
@@ -101,4 +107,8 @@ export default class TalisTopicPreview extends HTMLElement {
   }
 }
 
-customElements.define(TalisTopicPreview.is, TalisTopicPreview);
+if (window.customElements) {
+  customElements.define(TalisTopicPreview.is, TalisTopicPreview);
+} else {
+  window.addEventListener('WebComponentsReady', () => customElements.define(TalisTopicPreview.is, TalisTopicPreview));
+}
