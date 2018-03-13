@@ -35,8 +35,8 @@ template.innerHTML = `
   </style>
   <div class="container">
     <div class="header">
-      <h3><slot name="subtitle"></h3>
-      <h6><slot name="title"></h6>
+      <h3><slot name="title"></h3>
+      <h6><slot name="subtitle"></h6>
     </div>
     <div class="content">
       <slot name="content">
