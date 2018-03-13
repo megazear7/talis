@@ -29,3 +29,8 @@ Run the following command from the project root:
 ```
 mvn clean install -Plocal,frontend
 ```
+
+#### Credit
+[Olson Digital AEM Archetype](https://github.com/OlsonDigital/aem-archetype)
+
+[Google Chrome Labs How To Components](https://github.com/GoogleChromeLabs/howto-components)
