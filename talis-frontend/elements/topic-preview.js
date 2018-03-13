@@ -1,4 +1,5 @@
 var template = document.createElement('template');
+// While it is preferred to use id's inside of classes, the ShadyCSS polyfill does not support it.
 template.innerHTML = `
   <style>
     * {
@@ -10,6 +11,7 @@ template.innerHTML = `
     .header {
       width: 50%;
       float: left;
+      padding-right: 25px;
     }
     .content {
       width: 50%;
@@ -23,6 +25,9 @@ template.innerHTML = `
       border-bottom: 1px solid black;
       font-size: var(--h3-font-size);
     }
+    .container.bold h3 {
+      font-weight: bold;
+    }
     h6 {
       color: var(--gray);
       font-size: var(--h6-font-size);
@@ -30,11 +35,11 @@ template.innerHTML = `
   </style>
   <div class="container">
     <div class="header">
-      <h3></h3>
-      <h6></h6>
+      <h3><slot name="subtitle"></h3>
+      <h6><slot name="title"></h6>
     </div>
     <div class="content">
-      <slot>
+      <slot name="content">
     </div>
     <div class="clear"></div>
   </div>
@@ -48,24 +53,15 @@ export default class TalisTopicPreview extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['title', 'subtitle'];
+    return ['bold'];
   }
 
-  get title() { return this.getAttribute('title') }
-  set title(title) {
-    if (title) {
-      this.setAttribute('title', title);
+  get bold() { return this.getAttribute('bold') }
+  set bold(bold) {
+    if (bold) {
+      this.setAttribute('bold', bold);
     } else {
-      this.removeAttribute('title');
-    }
-  }
-
-  get subtitle() { return this.getAttribute('subtitle') }
-  set subtitle(subtitle) {
-    if (subtitle) {
-      this.setAttribute('subtitle', subtitle);
-    } else {
-      this.removeAttribute('subtitle');
+      this.removeAttribute('bold');
     }
   }
 
@@ -74,8 +70,7 @@ export default class TalisTopicPreview extends HTMLElement {
     this.attachShadow({mode: 'open'});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$title = () => this.shadowRoot.querySelector("h3");
-    this.$subtitle = () => this.shadowRoot.querySelector("h6");
+    this.$container = () => this.shadowRoot.querySelector(".container");
   }
 
   connectedCallback() {
@@ -85,24 +80,14 @@ export default class TalisTopicPreview extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (attrName === 'title') {
       this._titleChanged(oldVal, newVal);
-    } else if (attrName === 'subtitle') {
-      this._subtitleChanged(oldVal, newVal);
     }
   }
 
-  _titleChanged(oldVal, newVal) {
+  _boldChanged(oldVal, newVal) {
     if (newVal) {
-      this.$title().textContent = newVal
+      this.$container().classList.add("bold");
     } else {
-      this.$title().textContent = ''
-    }
-  }
-
-  _subtitleChanged(oldVal, newVal) {
-    if (newVal) {
-      this.$subtitle().textContent = newVal
-    } else {
-      this.$subtitle().textContent = ''
+      this.$container().classList.remove("bold");
     }
   }
 }
