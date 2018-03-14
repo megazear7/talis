@@ -60,6 +60,8 @@ export default class TalisTopicPreview extends HTMLElement {
    * by a design system for created design pattern examples. */
   static get spec() {
     return {
+      description: "Use this to create two column content with an associated title",
+      where: "Use this in the body of pages or in large content areas such as full width card components and modals.",
       props: {
         bold: Boolean,
         action: {
