@@ -60,7 +60,7 @@ export default class TalisTopicPreview extends HTMLElement {
    * by a design system for created design pattern examples. */
   static get spec() {
     return {
-      attributes: {
+      props: {
         bold: Boolean,
         action: {
           type: String,
