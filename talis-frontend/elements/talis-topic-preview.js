@@ -75,7 +75,7 @@ export default class TalisTopicPreview extends HTMLElement {
             "My short subtitle",
             "My long subtitle to test the display with a longer value"
           ]
-        }
+        },
         content: {
           type: BlockContent,
           message: "This content section should not contain headers",

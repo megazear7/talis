@@ -1,1 +1,1 @@
-import TalisTopicPreview from './elements/topic-preview.js';
+import TalisTopicPreview from './elements/talis-topic-preview.js';
