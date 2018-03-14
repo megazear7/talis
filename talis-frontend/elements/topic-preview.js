@@ -56,6 +56,35 @@ export default class TalisTopicPreview extends HTMLElement {
     return ['bold'];
   }
 
+  /* This could be interpreted by a test suite for automated testing as well as
+   * by a design system for created design pattern examples. */
+  static get spec() {
+    return {
+      attributes: {
+        bold: Boolean,
+        action: {
+          type: String,
+          example: "/some/url"
+        }
+      },
+      slots: {
+        title: InlineText,
+        subtitle: {
+          type: InlineText,
+          examples: [
+            "My short subtitle",
+            "My long subtitle to test the display with a longer value"
+          ]
+        }
+        content: {
+          type: BlockContent,
+          message: "This content section should not contain headers",
+          example: `<p>Lorem ipsum</p><a href='/example/url'>Example Link</a>`
+        }
+      }
+    }
+  }
+
   get bold() { return this.getAttribute('bold') }
   set bold(bold) {
     if (bold) {
